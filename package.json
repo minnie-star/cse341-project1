@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/minnie-star/cse341-project1/issues"
   },
-  "homepage": "https://github.com/minnie-star/cse341-project1#readme"
+  "homepage": "https://github.com/minnie-star/cse341-project1#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
