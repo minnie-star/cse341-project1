@@ -1,0 +1,29 @@
+### Get all contacts
+GET http://localhost:3000/users
+
+### Create a new contact
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "birthday": "07/07/1990",
+    "email": "info@mzulu.com",
+    "favoriteColor": "Pink",
+    "firstName": "Minenhle",
+    "lastName": "Zulu"
+}
+
+### Update a user (replace id with actual ObjectId)
+PUT http://localhost:3000/users/6a01c8f5d5274b7e230052e3
+Content-Type: application/json
+
+{
+   "birthday": "04/09/1990",
+    "email": "alexburn@gmail.com",
+    "favoriteColor": "Blue",
+    "firstName": "Alex",
+    "lastName": "Burn"
+}
+
+### Delete a user (replace id with actual ObjectId)
+DELETE http://localhost:3000/users/6a035c5cd88ae0ebdfedaef3

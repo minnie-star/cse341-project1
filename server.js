@@ -1,16 +1,22 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const { connectToDatabase, getDb} = require('./data/database');
 const userRoutes = require('./routes/users');
 
 const app = express();
 const port = 3000;
 
-app.use('/', require('./routes/index'));
+
+// Middleware to parse JSON request bodies
+app.use(bodyParser.json());
 
 (async () => {
   try {
     await connectToDatabase();
+    app.use(express.json());
     app.use('/users', userRoutes);
+
+    app.use('/', require('./routes/index'));
 
     app.listen(port, () => {
       console.log(`✅ Server running on http://localhost:${port}`);
